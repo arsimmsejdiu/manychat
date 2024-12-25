@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // <ClerkProvider>
+    <ClerkProvider>
       <html lang="en">
         <body className={jakarta.className}>
           <ThemeProvider
@@ -36,6 +36,6 @@ export default function RootLayout({
           </ThemeProvider>
         </body>
       </html>
-    // </ClerkProvider>
+    </ClerkProvider>
   );
 }
