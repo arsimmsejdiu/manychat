@@ -1,9 +1,3 @@
-import { PrismaClient } from "@prisma/client";
+import Stripe from "stripe";
 
-declare global {
-  var prisma: PrismaClient | undefined;
-}
-
-export const client = globalThis.prisma || new PrismaClient();
-
-if (process.env.NODE_ENV !== "production") globalThis.prisma = client;
+export const stripe = new Stripe(process.env.STRIPE_CLIENT_SECRET as string);
