@@ -5,10 +5,10 @@ const Header = () => {
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-2">
-        <div className="h-8 w-8 rounded-lg bg-white flex items-center justify-center font-bold">
+        <div className="h-8 w-8 rounded-lg bg-white flex items-center justify-center font-bold dark:text-black">
           li
         </div>
-        <span className="text-xl font-semibold text-primary-foreground">
+        <span className="text-xl font-semibold text-primary-foreground dark:text-white">
           Slide
         </span>
       </div>
@@ -17,7 +17,7 @@ const Header = () => {
         <Link href="#pricing">Pricing</Link>
         <Link href="#about">About</Link>
       </nav>
-      <Button className="bg-white text-primary hover:bg-gray-600 hover:text-white">
+      <Button className="bg-white text-primary hover:bg-gray-600 hover:text-white dark:text-black">
         <Link href="/dashboard">Login</Link>
       </Button>
     </div>
