@@ -12,6 +12,9 @@ import Items from "../sidebar/items";
 import { Separator } from "@/components/ui/separator";
 import { HelpDuoToneWhite } from "@/icons";
 import UpgradeCard from "../sidebar/upgrade";
+import { SubscriptionPlan } from "../subscription-plan";
+import CreateAutomation from "../create-automation";
+import ClerkAuthState from "../clerk-auth-state";
 
 type Props = {
   slug: string;
@@ -42,7 +45,7 @@ const InfoBar = ({ slug }: Props) => {
                 </div>
                 <div className="px-3 flex flex-col gap-y-5">
                   <div className="flex gap-x-2">
-                    {/* <ClerkAuthState /> */}
+                    <ClerkAuthState />
                     <p className="text-[#9B9CA0]">Profile</p>
                   </div>
                   <div className="flex gap-x-3">
@@ -50,16 +53,16 @@ const InfoBar = ({ slug }: Props) => {
                     <p className="text-[#9B9CA0]">Help</p>
                   </div>
                 </div>
-                {/* <SubscriptionPlan type="FREE"> */}
+                <SubscriptionPlan type="FREE">
                   <div className="flex-1 flex flex-col justify-end">
                     <UpgradeCard />
                   </div>
-                {/* </SubscriptionPlan> */}
+                </SubscriptionPlan>
               </div>
             </Sheet>
           </span>
           <Search />
-          {/* <CreateAutomation /> */}
+          <CreateAutomation />
           <Notifications />
         </div>
         <MainBreadCrumb page={page} slug={slug} />
