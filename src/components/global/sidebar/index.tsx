@@ -5,9 +5,9 @@ import { LogoSmall } from "@/svgs/LogoSmall";
 import React from "react";
 import Items from "./items";
 import { Separator } from "@/components/ui/separator";
-// import ClerkAuthState from '../clerk-auth-state'
+import ClerkAuthState from "../clerk-auth-state";
 import { HelpDuoToneWhite } from "@/icons";
-// import { SubscriptionPlan } from '../subscription-plan'
+import { SubscriptionPlan } from "../subscription-plan";
 import UpgradeCard from "./upgrade";
 
 type Props = {
@@ -31,7 +31,7 @@ const Sidebar = ({ slug }: Props) => {
         </div>
         <div className="px-3 flex flex-col gap-y-5">
           <div className="flex gap-x-2">
-            {/* <ClerkAuthState /> */}
+            <ClerkAuthState />
             <p className="text-[#9B9CA0]">Profile</p>
           </div>
           <div className="flex gap-x-3">
@@ -39,11 +39,11 @@ const Sidebar = ({ slug }: Props) => {
             <p className="text-[#9B9CA0]">Help</p>
           </div>
         </div>
-        {/* <SubscriptionPlan type="FREE"> */}
-        <div className="flex-1 flex flex-col justify-end">
-          <UpgradeCard />
-        </div>
-        {/* </SubscriptionPlan> */}
+        <SubscriptionPlan type="FREE">
+          <div className="flex-1 flex flex-col justify-end">
+            <UpgradeCard />
+          </div>
+        </SubscriptionPlan>
       </div>
     </div>
   );
